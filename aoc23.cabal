@@ -8,10 +8,16 @@ extra-doc-files: CHANGELOG.md
 common good -- THE COMMON GOOD
     default-language:   GHC2021
     ghc-options:        -Wall
-    default-extensions: OverloadedStrings
+    default-extensions: LambdaCase
+                      , OverloadedStrings
     build-depends:      base ^>=4.18.1.0
                       , parsec
+                      , recursion-schemes
 
 executable day1
     import:           good
     main-is:          src/day1.hs
+
+executable day2
+    import:           good
+    main-is:          src/day2.hs

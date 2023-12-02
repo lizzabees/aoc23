@@ -34,7 +34,7 @@ type Parser = Parsec String ()
 decimal :: Parser Int
 decimal = choice $ zipWith value [1..] names
   where value n s = n <$ try (string s)
-        names = [ "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+        names = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 calibration :: Parser (Maybe Int)
 calibration = choice
